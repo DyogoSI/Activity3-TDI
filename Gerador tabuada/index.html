@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem e Tabuada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Contagem e Gerador de Tabuada</h1>
+        <div id="tabs">
+            <button onclick="showTab('contagem')" class="active">Contagem</button>
+            <button onclick="showTab('tabuada')">Tabuada</button>
+        </div>
+
+        
+        <div id="contagem" class="tab-content">
+            <h2>Contagem</h2>
+            <label for="start">Início:</label>
+            <input type="number" id="start" placeholder="Digite o início">
+            <label for="end">Fim:</label>
+            <input type="number" id="end" placeholder="Digite o fim">
+            <label for="step">Passo:</label>
+            <input type="number" id="step" placeholder="Digite o passo">
+            <button onclick="generateCount()">Contar</button>
+            <p id="count-result"></p>
+        </div>
+
+        
+        <div id="tabuada" class="tab-content hidden">
+            <h2>Tabuada</h2>
+            <label for="number">Número:</label>
+            <input type="number" id="number" placeholder="Digite um número">
+            <button onclick="generateTable()">Gerar Tabuada</button>
+            <ul id="table-result"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
